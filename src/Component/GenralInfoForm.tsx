@@ -1,13 +1,7 @@
-import { useState } from "react";
-
-export default function GenralInfo() {
+export default function GenralInfo({generalInfo , setGeneralInfo}) {
     // create a Object State to hold user Data
 
-    const [generalInfo, setGeneralInfo] = useState({
-        name: "",
-        email: "",
-        phone: "",
-    });
+
 
 	const handleChange = (e) => {
 		const {name , value } = e.target ;

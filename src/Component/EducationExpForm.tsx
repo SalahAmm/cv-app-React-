@@ -1,12 +1,8 @@
-import { useState } from "react";
-
-export default function EducationExp() {
+export default function EducationExp({Education , setEducation}) {
     // create state of array of objects to be able to add extra
     //Education Experience
 
-    const [Education, setEducation] = useState([
-        { school: "", title: "", date: "", id: 1 },
-    ]);
+
 
 	const handleChange = (e , id: number) => {
 		const {name , value } = e.target 
@@ -14,6 +10,10 @@ export default function EducationExp() {
 			return item.id === id ? {...item , [name] : value} : item
 		}))
 	} 
+
+    const addExtra = () => {
+       setEducation(prev => [...prev , {school: "", title: "", date: "", id: Date.now() },]) 
+    }
 
     return (
         <>
@@ -29,14 +29,14 @@ export default function EducationExp() {
                         />
                         <input
                             type="text"
-                            name="school"
+                            name="title"
                             value={item.school}
                             placeholder="School Name"
                             onChange={(e) => handleChange(e, item.id)}
                         />
                         <input
                             type="text"
-                            name="school"
+                            name="date"
                             value={item.school}
                             placeholder="School Name"
                             onChange={(e) => handleChange(e, item.id)}
@@ -45,7 +45,7 @@ export default function EducationExp() {
                 );
             })}
 
-				<button className="add-extra">Add Extra</button>
+				<button className="add-extra" onClick={() => addExtra()}>Add Extra</button>
         </>
     );
 }

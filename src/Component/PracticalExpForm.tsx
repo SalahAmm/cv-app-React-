@@ -1,20 +1,26 @@
-import { useState } from 'react'
 
-
-export default function PracticalExp () {
-
-    const [practical , setPractical] = useState ([
-        { company : '' , position: '' , responsibilities: '' , startDate: '' , endDate: '' ,id: 1 },
-    ])
+export default function PracticalExp ({practical , setPractical}) {
 
     // map over the objects and if the id of object ,  match the id of were changes are  , then change the object value 
 
-    const handleChange = (e, id : number) => {
+    const handleChange = (e, id ) => {
+
         const {name , value } = e.target ;
         setPractical(prevData => prevData.map((item) => {
           return  ( item.id === id ?  {...item , [name]: value} : item) 
         }))
     }
+
+    const addExtra = () => {
+        setPractical(prev => [...prev , {
+            company: "",
+            position: "",
+            responsibilities: "",
+            startDate: "",
+            endDate: "",
+            id: Date.now(),}])
+    }
+    
     return (
         <>
         {/* map over the practical objects and create a form based on it  */}
@@ -57,7 +63,7 @@ export default function PracticalExp () {
             </div>
         })}
         {/* Add Extra PracticalExp  Section */}
-            <button className="add-extra">Add Extra</button>
+            <button className="add-extra" onClick={() => addExtra()}>Add Extra</button>
 
         </>
     )
