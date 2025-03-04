@@ -30,14 +30,14 @@ export default function EducationExp({Education , setEducation}) {
                         <input
                             type="text"
                             name="title"
-                            value={item.school}
+                            value={item.title}
                             placeholder="School Name"
                             onChange={(e) => handleChange(e, item.id)}
                         />
                         <input
                             type="text"
                             name="date"
-                            value={item.school}
+                            value={item.date}
                             placeholder="School Name"
                             onChange={(e) => handleChange(e, item.id)}
                         />
