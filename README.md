@@ -1,4 +1,5 @@
-<<<<<<< HEAD
+https://react-cv-app-project.netlify.app/
+
 # CV-Application-React-
 =======
 # React + TypeScript + Vite
