@@ -1,7 +1,4 @@
 export default function GenralInfo({generalInfo , setGeneralInfo}) {
-    // create a Object State to hold user Data
-
-
 
 	const handleChange = (e) => {
 		const {name , value } = e.target ;

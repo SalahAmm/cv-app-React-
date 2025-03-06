@@ -14,18 +14,18 @@ export default function FormSection(props) {
 
     return (
         <>
+            <h2>Personal Information</h2>
+
             <GenralInfo
                 generalInfo={generalInfo}
                 setGeneralInfo={setGeneralInfo}
             />
-            <EducationExp 
-                Education={Education} 
-                setEducation={setEducation} 
-            />
-            <PracticalExp 
-                practical={practical} 
-                setPractical={setPractical} 
-            />
+            <h2>Education</h2>
+
+            <EducationExp Education={Education} setEducation={setEducation} />
+            <h2>Work Experience</h2>
+
+            <PracticalExp practical={practical} setPractical={setPractical} />
         </>
     );
 }

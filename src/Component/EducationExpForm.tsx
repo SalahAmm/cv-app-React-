@@ -19,6 +19,7 @@ export default function EducationExp({Education , setEducation}) {
         <>
             {Education.map((item) => {
                 return (
+                    <>
                     <div className="education-info" key={item.id}>
                         <input
                             type="text"
@@ -31,17 +32,18 @@ export default function EducationExp({Education , setEducation}) {
                             type="text"
                             name="title"
                             value={item.title}
-                            placeholder="School Name"
+                            placeholder="title"
                             onChange={(e) => handleChange(e, item.id)}
                         />
                         <input
-                            type="text"
+                            type="date"
                             name="date"
                             value={item.date}
-                            placeholder="School Name"
                             onChange={(e) => handleChange(e, item.id)}
                         />
+                    <hr/>
                     </div>
+                    </>
                 );
             })}
 

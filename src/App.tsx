@@ -26,21 +26,25 @@ function App() {
     ]);
 
     return (
-        <>
-            <FormSection
-                genralInfo={generalInfo}
-                setGeneralInfo={setGeneralInfo}
-                Education={Education}
-                setEducation={setEducation}
-                practical={practical}
-                setPractical={setPractical}
-            />
-            <DocumentPreview
-                generalInfo={generalInfo}
-                Education={Education}
-                practical={practical}
-            />
-        </>
+        <div className="app">
+            <div className="form-container">
+                <FormSection
+                    generalInfo={generalInfo}
+                    setGeneralInfo={setGeneralInfo}
+                    Education={Education}
+                    setEducation={setEducation}
+                    practical={practical}
+                    setPractical={setPractical}
+                />
+            </div>
+            <div className="preview-container">
+                <DocumentPreview
+                    generalInfo={generalInfo}
+                    Education={Education}
+                    practical={practical}
+                />
+            </div>
+        </div>
     );
 }
 

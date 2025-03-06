@@ -1,4 +1,3 @@
-
 export default function PracticalExp ({practical , setPractical}) {
 
     // map over the objects and if the id of object ,  match the id of were changes are  , then change the object value 
@@ -59,6 +58,7 @@ export default function PracticalExp ({practical , setPractical}) {
                     value={item.endDate}
                     onChange={(e) => handleChange(e , item.id)}
                     />
+                    <hr/>
 
             </div>
         })}
